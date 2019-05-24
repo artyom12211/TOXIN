@@ -1,0 +1,21 @@
+{
+  "name": "webpacktut",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "webpack": "^4.32.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production --open"
+  },
+  "keywords": [],
+  "author": "Nga",
+  "license": "ISC",
+  "description": ""
+}
