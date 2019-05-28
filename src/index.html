@@ -31,22 +31,159 @@
 		<div class="overlay">
 		    <nav class="overlayMenu">  
 		        <ul role="menu">
-		            <li><a href="#" role="menuitem">Parity</a></li>
-		            <li><a href="#" role="menuitem">Abstract</a></li>
-		            <li><a href="#" role="menuitem">Educated</a></li>
-		            <li><a href="#" role="menuitem">Decorum</a></li>
-		            <li><a href="#" role="menuitem">Tenuous</a></li>
+		            <li><a href="#" role="menuitem">О нас</a></li>
+		            <li><a href="#" role="menuitem">Услуги</a></li>
+		            <li><a href="#" role="menuitem">Вакансии</a></li>
+		            <li><a href="#" role="menuitem">Новости</a></li>
+		            <li><a href="#" role="menuitem">Соглашения</a></li>
 		        </ul>
 		    </nav>
 		</div>
 
 		<div class="navBurger" role="navigation" id="navToggle"></div> 
 	</header>
+	<section class="mainSection">
+		<div class="container">
+
+			<div class="calendar">
+				<div class="calendar__title"><h3>Найдём номера под ваши пожелания</h3></div>
+				<div class="calendar__form">
+					<form class="">
+						<div class="">
+							<div class="d-flex">
+								<label class="arrival" for="arrival">
+									<h3>ПРИБЫТИЕ</h3>
+								<div class="select-wrapper">
+									<select>
+									  <option>ДД.ММ.ГГГГ</option>
+									  <option>Test</option>
+									  <option>Test</option>s
+									</select>
+								  <div class="select-arrow"></div>
+								  <div class="select-arrow"></div>
+								</div>
+								</label>
+
+								<label class="arrival" for="arrival">
+									<h3>ВЫЕЗД</h3>
+									<div class="select-wrapper">
+										<select>
+										  <option>ДД.ММ.ГГГГ</option>
+										  <option>Test</option>
+										  <option>Test</option>
+										</select>
+									  <div class="select-arrow"></div>
+									  <div class="select-arrow"></div>
+									</div>
+								</label>
+							</div>
+												
+						<label class="arrival" for="arrival">
+								<h3>ГОСТИ</h3>
+								<div class="select-wrapper">
+									<select>
+									  <option>Сколько гостей</option>
+									  <option>Test</option>
+									  <option>Test</option>
+									</select>
+								  <div class="select-arrow"></div>
+								  <div class="select-arrow"></div>
+								</div>
+							</label>
+							<div class="form__button"> <button>ПОДОБРАТЬ НОМЕР</button>
+							 <a class="arrow-3" href="#link">
+							    <svg class="arrow-3-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+										<g fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+											<circle class="arrow-3-iconcircle" cx="16" cy="16" r="15.12"></circle>
+											<path class="arrow-3-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+										</g>
+									</svg>
+								</a>
+						</div>
+					</form>
+				</div>
+				</div>
+			</div>
+
+			<div class="main__text">
+				<p>Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="footerMenu">
+		<div class="container d-flex flex-wrap">
+			<div class="logo">
+				<img src="image/logo.png" alt="logo">
+				<p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+			</div>
+			<div class="footerMenu__links d-flex flex-wrap">
+				<div class="footerMenu__nav">
+					<h3 class="footerMenu__title">НАВИГАЦИЯ</h3>
+					<nav>
+						<ul>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Служба поддержки</a></li>
+							<li><a href="#">Услуги</a></li>
+						</ul>
+					</nav>
+				</div>	
+				
+				<div class="footerMenu__About">
+					<h3 class="footerMenu__title">О НАС</h3>
+					<nav>
+						<ul>
+							<li><a href="#">О сервисе</a></li>
+							<li><a href="#">Наша команда</a></li>
+							<li><a href="#">Вакансии</a></li>
+							<li><a href="#">Инвесторы</a></li>
+						</ul>
+					</nav>
+				</div>	
+
+				<div class="footerMenu__support">
+					<h3 class="footerMenu__title">СЛУЖБА ПОДДЕРЖКИ</h3>
+					<nav>
+						<ul>
+							<li><a href="#">Соглашения</a></li>
+							<li><a href="#">Сообщества</a></li>
+							<li><a href="#">Связь с нами</a></li>
+						</ul>
+					</nav>
+				</div>	
+
+				<div class="footerMenu__subscribe">
+					<h3 class="footerMenu__title">ПОДПИСКА</h3>
+					<nav>
+						<ul>
+							<li><a href="#">Получайте специальные предложения и новости сервиса</a></li>
+						</ul>
+					</nav>
+					<form id="sendEmail">
+						<input type="email" placeholder="Email">
+							 <a class="arrow-3 arrow-3_custom" href="#link" onclick="document.getElementById('sendEmail').submit();">
+							    <svg class="arrow-3-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+										<g fill="none" stroke="#A3A0FC" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+											<circle class="arrow-3-iconcircle" cx="16" cy="16" r="15.12"></circle>
+											<path class="arrow-3-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+										</g>
+									</svg>
+								</a>
+					</form>
+				</div>	
+
+			</div>
+		</div>
+	</section>
+	<footer>
+		
+	</footer>
 	<script
 		src="http://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"> 	
 	</script>
-	<script src="js/index.js"></script>
+	<script src="../dist/main.js"></script>
 </body>
 </html>
