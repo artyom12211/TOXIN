@@ -83,14 +83,14 @@ $(document).ready(function(){
 		$('.dropdown .apply').click(function(){
 			let sumGuests = [];
 			let one = $('.wrapper-count > .count').text();
-			for(let i=0;i<one.length;i++){
-				let push = $('.wrapper-count > .count').eq(i).text();
+			for(let i=0;i<one.length;i++) {
+				let push = $('.wrapper-count').eq(i).children('.count').text();
 				sumGuests.push(push);
 				var summElem = sumGuests.reduce(function(sum,curr){
 					return parseInt(sum+parseInt(curr));
 				},0); 
 			}
-			$(this).parent('.select-wrapper').children('.select-wrapper').children('select').children('option').text(summElem + " Гостя(Гостей)");
+			$(this).parent('.calendar__form').children('.select-wrapper').children('select').children('option').text(summElem + " Гостя(Гостей)");
 		});
 		$('.form__button').click(function(e){
 			e.preventDefault();

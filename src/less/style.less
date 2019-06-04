@@ -1506,3 +1506,280 @@ footer {
 
 /* PAGE ROOMDETALIS */
 
+.photoSeries {
+    &__mainPhoto {
+        width: 60%;
+        & > img {height: 100%;max-width: 100%;object-fit: cover;}
+    }
+    &__additionalsPhoto {
+        width: 40%;
+        & > img {height: 100%; width: 100%;object-fit: cover;}
+    }
+}
+
+.infoLuxSection {
+    margin-top: 50px;
+    & .reviews {
+        text-align: left;
+        & > h3 {
+            font-family: Quicksand;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 19px;
+            line-height: 24px;
+            color: #1F2041;
+            & > span {
+              display: block; margin-left: auto;
+              font-family: Montserrat;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 14px;
+              text-align: right;
+              color: rgba(31, 32, 65, 0.5);
+            }
+        }
+        &__block {
+            & > div:first-child {
+
+            }
+            & > div:last-child {
+            }
+            & .reviews__name {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 24px;
+                color: rgba(31, 32, 65, 0.75);
+            }
+            & .reviews__time {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 24px;
+                color: rgba(31, 32, 65, 0.75);
+                margin-top: 4px;
+            }
+            & .reviews__descr {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 24px;
+                color: rgba(31, 32, 65, 0.75);
+                margin-top: 10px;
+            }
+        }
+    }
+    & .infoLux {
+        & .infoHotelRoom{
+            & h3 {
+                font-family: Quicksand;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 19px;
+                line-height: 24px;
+                color: #1F2041;
+            }
+            margin-top: 20px;
+            & > div {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                align-items: center;
+                & > img {
+                    margin-right: 10px;
+                }
+                & > div > span:first-child {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: rgba(31, 32, 65, 0.75);
+                }
+                & > div > span:nth-child(2) {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: rgba(31, 32, 65, 0.75);
+                }
+            }
+        }
+    }
+}
+.impression {
+    margin-left: 70px;
+    & .impressionGrath {
+        align-items: flex-end;
+        & > div {
+            margin-left: 30px;
+            & > div {align-items: center;}
+            & > div > span {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 24px;
+                color: rgba(31, 32, 65, 0.75);
+            }
+            & > div > div {border-radius: 50%; width: 10px; height: 10px; margin-right: 5px;}
+            & > div:first-child > div {
+                background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+            }
+            & > div:nth-child(2) > div {
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            }
+            & > div:nth-child(3) > div {
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            }
+            & > div:nth-child(4) > div {
+                background: linear-gradient(180deg, #909090 0%, #3D4975 100%);
+            }
+        }
+    }
+}
+
+.like {
+  position: relative;
+  bottom: 26px;
+  align-items: center;
+    & > span {
+        margin-left: auto;
+        margin-right: 11px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        color: #BC9CFF;
+    }
+    border-radius: 15px;
+    border-color: #C7C7CF;
+    border-width: 1.5px;
+    border-style: solid;
+    width: 50px;
+    height: 25px;
+    margin: 0 auto;
+}
+
+.reviews__block {
+  & > div:last-child {
+      & .heart {
+        width: 8px;
+        background-color: white; 
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-left-width: 0px !important;
+        border-bottom-width: 0px !important;
+      }
+      & .heart:before {
+        background-color: white;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-top-width: 0px;
+      }
+  }
+}
+
+.reviews__icon {
+  & > img {
+    position: relative;
+    bottom: 11px;
+  }
+}
+
+.heart {
+  margin-left: 9px;
+  margin-top: 0px;
+  position: relative;
+  width: 7px;
+  height: 11px;
+  background-color: #BC9CFF;
+/* Скругляем верхние углы */    
+  -webkit-border-radius: 50px 50px 0 0;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+/* Определяем угол наклона */    
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+/* Формируем правую часть */
+.heart:before {
+  position: absolute;
+  width: 11px;
+  height: 7px;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background-color: #BC9CFF;
+  -webkit-border-radius: 50px 50px 0 0;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 0 50px 50px 0;
+}
+
+.infoLux__rules {
+  justify-content: space-between;
+  & .block__rules {
+    margin-left: 13px;
+    & > h3 {
+      margin-left: 20px;
+      font-family: Quicksand;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 24px;
+      color: #1F2041;
+    }
+    & > div {
+      align-items: center;
+      & > div {
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background: rgba(31, 32, 65, 0.25);
+      }
+      & > span {
+        margin-left: 10px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+      }
+    }
+  }
+  & .block__cancel {
+    & > h3 {
+      font-family: Quicksand;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 24px;
+      color: #1F2041;
+    }
+    & > p {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(31, 32, 65, 0.75);
+      max-width: 340px;
+    }
+  }
+}
+
+@media all and(max-width: 500px) {
+    .photoSeries {
+        flex-direction: column;
+        &__mainPhoto {width: 100%;}
+        &__additionalsPhoto {width: 100%;flex-wrap: wrap; &>img {max-width: 100%;} }
+    }
+}
