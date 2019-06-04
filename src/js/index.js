@@ -4,6 +4,8 @@ import '../css/style.css';
 import '../index.html';
 import '../search.html';
 import '../roomDetalis.html';
+import '../signUp.html';
+import '../signIn.html';
 import '../lib/moment.js'
 import '../lib/moment-with-locales.min.js';
 import '../lib/JqueryUI/jquery-ui.js';
@@ -44,7 +46,7 @@ $(document).ready(function(){
 
 	$('.input-wrapper').click(function(event){
 		$('.calendarBootstrap').toggleClass('on');
-		$('.calendarBootstrap').slideToggle('on');
+		$('.calendarBootstrap').slideToggle();
 	});
 	$('.form__button').hover(function()
 		{
@@ -56,7 +58,7 @@ $(document).ready(function(){
 		);
 
 
-		$('.select-wrapper').click(function(){
+		$('.select-wrapper > select').click(function(){
 			//$('.select-wrapper > select > option').remove();
 			$(this).parent().children('.dropdown').slideToggle();
 		});
@@ -76,13 +78,14 @@ $(document).ready(function(){
 		});
 
 		$('.dropdown .clear').click(function(){
-			$('.wrapper-count > .count').text('0');
-			$('.select-wrapper > select > option').text("Сколько гостей");
+			$(this).parent().parent().children('.line').children('.wrapper-count').children('.count').text('0');
+			$(this).parent().parent().parent().children('select').children('option').text("Сколько гостей");
 		});
 
 		$('.dropdown .apply').click(function(){
 			let sumGuests = [];
-			let one = $('.wrapper-count > .count').text();
+			let one = $(this).parent().parent().children('.line').children('.wrapper-count').children('.count').text();
+			console.log(one);
 			for(let i=0;i<one.length;i++) {
 				let push = $('.wrapper-count').eq(i).children('.count').text();
 				sumGuests.push(push);
@@ -90,7 +93,7 @@ $(document).ready(function(){
 					return parseInt(sum+parseInt(curr));
 				},0); 
 			}
-			$(this).parent('.calendar__form').children('.select-wrapper').children('select').children('option').text(summElem + " Гостя(Гостей)");
+			$(this).parent().parent().parent().children('select').children('option').text(summElem + " Гостя(Гостей)");
 		});
 		$('.form__button').click(function(e){
 			e.preventDefault();
@@ -106,9 +109,9 @@ $(document).ready(function(){
 			let length = $('.comfortsSelect__dropdown').children().length;
 			let summ = [];
 			for(let i=0;i<length;i++) {
-				let text1 = $('.comfortsSelect__dropdown').children().eq(i).children('span').text();
+				let text1 = $('.comfortsSelect__dropdown').children().eq(i).children('span').text().slice(0,4);
 				let text2 = $('.comfortsSelect__dropdown').children().eq(i).children('.wrapper-count').children('.count').text();
-				summ += text2 + " " + text1 + ", ";
+				summ += text2 + " " + text1 + ". ";
 			}	
 			$('.comfortsSelect > .select-wrapper > select>option').text(summ);
 		});
@@ -119,7 +122,7 @@ $(document).ready(function(){
 			let length = $('.comfortsSelect__dropdown').children().length;
 			let summ = [];
 			for(let i=0;i<length;i++) {
-				let text1 = $('.comfortsSelect__dropdown').children().eq(i).children('span').text();
+				let text1 = $('.comfortsSelect__dropdown').children().eq(i).children('span').text().slice(0,4);
 				let text2 = $('.comfortsSelect__dropdown').children().eq(i).children('.wrapper-count').children('.count').text();
 				summ += text2 + " " + text1 + ", ";
 			}	
@@ -141,6 +144,13 @@ $(document).ready(function(){
 
 		$('.hotels__table').click(function(){
 			window.location.href = "roomDetalis.html";
+		});
+
+		$('.signUp').click(function(){
+			window.location.href = 'signUp.html';
+		});
+		$('.signIn').click(function(){
+			window.location.href = 'signIn.html';
 		});
 });
 
